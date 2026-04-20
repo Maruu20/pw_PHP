@@ -35,4 +35,13 @@ if($nilai >= 85){
 } else{
     echo "Grade E";
 }
+echo  "<br><br>==============================<br><br>";
+$nomor = 10;
+
+if ($nomor % 2 == 0){
+    echo "Genap";
+}
+else{
+    echo "Ganjil";
+}
 ?>
