@@ -28,7 +28,17 @@ function kurang($a, $b){
 echo "<br>================<br>";
 
 echo tambah(1,2);
+
+function login(string $username, string $password)
+{
+    if($username == "admun" && $password == "1234567") {
+        return true;
+    } else {
+        return false;
+    }
+}
 ?>
+
 <?php
 echo "<br>==================<br>"
 ?>
@@ -53,3 +63,26 @@ echo "<br>==================<br>"
 
     }
 ?>
+
+
+
+<from method="POST">
+    <label for"">Username:</label>
+    <input type="text" name="username"><br><br>
+    <label for"">Password:</label>
+    <input type="password" name="password"><br><br>
+    <input type="button="kirim" value="kirim">
+</from>
+ 
+<?php
+if (isset($_POST["username"])){
+    $Username = $_POST["username"];
+    $Password = $_POST["password"];
+    if (login($Username, $Password)) {
+        echo "Login Berhasil";
+    } else {
+        echo "Login Bagal";
+
+    }
+}
+
